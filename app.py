@@ -1,10 +1,11 @@
-def divide(a, b):
-  if b == 0:
-    raise ZeroDivisionError("Cannot divide by zero")
-  return a / b
+try:
+	# Check for division by zero
+	if denominator == 0:
+		raise ZeroDivisionError("Cannot divide by zero")
+	result = numerator / denominator
+except ZeroDivisionError as e:
+	print(f"Error: {e}")
 
-def get_user(users, user_id):
-  for user in users:
-    if user['id'] == user_id:
-      return user
-  return None
+# Corrected comparison operator
+if user_id == expected_id:
+	print("User ID matches")
