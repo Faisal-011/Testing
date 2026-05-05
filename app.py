@@ -1,4 +1,7 @@
-def divide(a, b):
-	if b == 0:
-		raise ZeroDivisionError("Cannot divide by zero")
-	return a / b
+def get_user():
+	pass
+
+a = 10
+b = 2
+result = a / b
+print(result)
