@@ -1,3 +1,2 @@
-user = {'id': 1, 'name': 'John'}
+user = {'id': 1, 'name': 'John Doe'}
 print(user['id'])
-# Ensure the 'user' variable is defined before accessing its 'id' key
