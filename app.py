@@ -1,4 +1,3 @@
-try:
-	user_id = user['id']
-except KeyError:
-	raise ValueError("'id' key not found in user dictionary")
+user = {'id': 1, 'name': 'John'}
+print(user['id'])
+# Ensure the 'user' variable is defined before accessing its 'id' key
