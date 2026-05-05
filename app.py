@@ -1,10 +1,10 @@
-def divide(a, b):
-    return a / b  # bug: no zero division check
+def divide(dividend, divisor):
+  if divisor == 0:
+    raise ZeroDivisionError("Cannot divide by zero")
+  return dividend / divisor
 
-def get_user(users, id):
-    for user in users:
-        if user["id"] = id:  # bug: assignment instead of comparison
-            return user
-
-result = divide(10, 0)
-print(result)
+def get_user(id, users):
+  for user in users:
+    if user['id'] == id:
+      return user
+  return None
