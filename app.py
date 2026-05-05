@@ -4,7 +4,7 @@ def calculate(a, b):
   result = a / b
   return result
 
-def check_user(user, id):
+def check_id(user, id):
   if user['id'] == id:
     return True
   return False
