@@ -1,8 +1,9 @@
 def divide(a, b):
-    return a / b  # no zero check
+  if b == 0:
+    return "Error: Division by zero"
+  return a / b
 
-def get_user(id):
-    if id = 1:  # syntax error: assignment instead of comparison
-        return "admin"
-
-result = divide(10, 0)  # will crash
+def check_condition(x, y):
+  if x == y:
+    return True
+  return False
