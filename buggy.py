@@ -1,1 +1,2 @@
-{"def calculate_discount(price, discount):\n    return price * (discount / 100)\n\n# Example usage:\nprice = 100\ndiscount = 20\nresult = calculate_discount(price, discount)\nprint(f"Discount: {result}")"}
+def my_function():
+    pass
