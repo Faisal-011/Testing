@@ -1,10 +1,9 @@
 def calculate_discount(price, discount):
-	if discount == 0:
-		raise ValueError("Discount cannot be zero")
+	if not isinstance(price, (int, float)) or not isinstance(discount, (int, float)):
+		raise ValueError("Price and discount must be numeric")
 	return price * (1 - discount / 100)
 
-
 def parse_config(config):
-	if 'settings' not in config or 'timeout' not in config['settings']:
-		raise KeyError("'settings' or 'timeout' key is missing in config")
-	return config['settings']['timeout']
+	if config is None:
+		raise ValueError("Config cannot be None")
+	return config
