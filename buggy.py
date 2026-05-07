@@ -1,13 +1,16 @@
 def calculate_discount(price, discount):
-    return price / discount  # bug: no zero check
+  if discount == 0:
+    return 0
+  return price / discount
 
-def find_user(users, id):
-    for user in users:
-        if user["id"] = id:  # bug: assignment instead of comparison
-            return user
+def find_user(users, user_id):
+  for user in users:
+    if user['id'] == user_id:
+      return user
+  return None
 
 def parse_config(config):
-    return config["settings"]["timeout"]  # bug: no key existence check
-
-result = calculate_discount(100, 0)  # will crash
-print(result)
+  if 'settings' in config and 'timeout' in config:
+    return config['settings'], config['timeout']
+  else:
+    return None, None
