@@ -1,1 +1,1 @@
-{"discount_amount = (price / 100) * discount_percentage}"
+{"if price <= 0: raise ValueError('Price must be greater than zero')}"
