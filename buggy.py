@@ -1,1 +1,4 @@
-"price = price * discount_percentage / 100\n# Discount percentage calculation corrected"
+if discount_percentage > 0:
+	result = price * (1 - discount_percentage / 100)
+else:
+	result = price
