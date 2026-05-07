@@ -3,14 +3,8 @@ def calculate_discount(price, discount):
     return 0
   return price / discount
 
-def find_user(users, user_id):
+def find_user(users, username):
   for user in users:
-    if user['id'] == user_id:
+    if user['username'] == username:
       return user
   return None
-
-def parse_config(config):
-  if 'settings' in config and 'timeout' in config:
-    return config['settings'], config['timeout']
-  else:
-    return None, None
