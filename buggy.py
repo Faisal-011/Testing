@@ -1,16 +1,17 @@
 def calculate_discount(price, discount):
-	if discount == 0:
-		return 0
-	else:
-		return price * (1 - discount)
+  if discount == 0:
+    return price
+  else:
+    return price * (1 - discount)
 
 def find_user(user_id):
-	# original find_user function implementation
-	pass
+  # implement find_user function
+  pass
 
 def parse_config(config):
-	try:
-		# parse config logic
-	pass
-	except Exception as e:
-		handle_error(e)
+  try:
+    # parse config
+    pass
+  except Exception as e:
+    # define handle_error function or replace with proper error handling
+    print(f"Error parsing config: {e}")
