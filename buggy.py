@@ -1,1 +1,1 @@
-"price = price * discount_percentage / 100\n# Discount percentage calculation corrected"
+{"discount_amount = (price / 100) * discount_percentage}"
