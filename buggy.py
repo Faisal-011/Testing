@@ -1,19 +1,10 @@
-def find_user(user_id, users):
-	for user in users:
-		if user['id'] == user_id:
-			return user
-	return None
-
 def calculate_discount(price, discount):
-	if discount == 0:
-		return price
-	else:
-		return price - (price * discount / 100)
+  if discount == 0:
+    raise ValueError("Discount cannot be zero")
+  return price * (1 - discount)
 
-def parse_config(config):
-	# Add error handling for config parsing
-	try:
-		# Config parsing logic here
-		return parsed_config
-	except Exception as e:
-		return None
+def find_user(users, username):
+  for user in users:
+    if user['username'] == username:
+      return user
+  return None
