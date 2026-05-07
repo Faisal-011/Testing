@@ -1,1 +1,1 @@
-{"if price <= 0: raise ValueError('Price must be greater than zero')}"
+raise ValueError('Price must be greater than zero')
