@@ -1,19 +1,17 @@
-def find_user(user_id):
-	# Implement the find_user function logic here
-	# For example:
-	users = {1: "John", 2: "Jane"}
-	return users.get(user_id)
+def find_user(users, user_id):
+	if user_id not in users:
+		raise ValueError("User not found")
+	return users[user_id]
 
 def calculate_discount(price, discount_percentage):
-	# Implement the calculate_discount function logic here
-	return price * (1 - discount_percentage / 100)
+	if price < 0 or discount_percentage < 0:
+		raise ValueError("Price and discount percentage must be non-negative")
+	return price * discount_percentage / 100
 
-def parse_config(config_str):
+def parse_config(config):
 	try:
-		# Implement the parse_config function logic here
-		config = {}
-		# Parse the config string and populate the config dictionary
-		return config
+		# parse config logic here
+	except FileNotFoundError as e:
+		raise ValueError("Config file not found") from e
 	except Exception as e:
-		# Handle the exception and provide a meaningful error message
-		raise ValueError("Failed to parse config: " + str(e))
+		raise ValueError("Failed to parse config") from e
