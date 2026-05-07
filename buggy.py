@@ -1,3 +1,1 @@
-def calculate_discount(price, discount_percentage):
-discount_amount = ((price / 100) * discount_percentage)
-return discount_amount
+{"# Original line: Incorrect syntax for calculating discount amount.\n# Suggested fix: Use parentheses to ensure correct order of operations: discount_amount = ((price / 100) * discount_percentage)\n# Corrected code:\ndef calculate_discount(price, discount_percentage):\n    discount_amount = ((price / 100) * discount_percentage)\n    return discount_amount\n"}
