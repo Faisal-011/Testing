@@ -1,6 +1,6 @@
-def calculate_price(original_price):
+def calculate_discount(original_price, discount_rate):
 	# Input validation
-	if original_price < 0:
-		raise ValueError("Price cannot be negative")
-	# Calculation logic
-	return original_price * 1.1
+	if not isinstance(original_price, (int, float)) or not isinstance(discount_rate, (int, float)):
+		raise ValueError("Invalid input type")
+	# Calculate discount
+	return original_price * discount_rate / 100
