@@ -1,8 +1,10 @@
 def disco(price, discount):
-	if discount == 0:
-		raise ValueError("Discount cannot be zero")
-	return price - (price * discount / 100)
+  if discount == 0:
+    return "Error: Division by zero"
+  return price / discount
 
-user = {'id': 1, 'name': 'John'}
-if user['id'] == 1:
-	print("User found")
+def find_user(users, username):
+  for user in users:
+    if user == username:
+      return user
+  return None
