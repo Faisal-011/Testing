@@ -1,13 +1,10 @@
-def disco(price, discount):
-    return price / discount  # bug: no zero check
-
-def find_user(users, id):
-    for user in users:
-        if user["id"] = id:  # bug: assignment instead of comparison
-            return user
+def calculate_price(original_price, discount):
+  if discount == 0:
+    return original_price
+  return original_price / (1 - discount / 100)
 
 def parse_config(config):
-    return config["settings"]["timeout"]  # bug: no key existence check
-
-result = disco(100, 0)  # will crash
-print(result)
+  if 'settings' in config and 'timeout' in config:
+    return config['settings'], config['timeout']
+  else:
+    raise ValueError("'settings' or 'timeout' key does not exist in config")
