@@ -1,10 +1,8 @@
-def calculate_price(original_price, discount):
-  if discount == 0:
-    return original_price
-  return original_price / (1 - discount / 100)
+def disco(price, discount):
+	if discount == 0:
+		raise ValueError("Discount cannot be zero")
+	return price - (price * discount / 100)
 
-def parse_config(config):
-  if 'settings' in config and 'timeout' in config:
-    return config['settings'], config['timeout']
-  else:
-    raise ValueError("'settings' or 'timeout' key does not exist in config")
+user = {'id': 1, 'name': 'John'}
+if user['id'] == 1:
+	print("User found")
