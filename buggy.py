@@ -1,8 +1,5 @@
-def disco(price, discount):
+def calculate_price(original_price, discount):
 	if discount == 0:
-		raise ValueError("Discount cannot be zero")
-	return price - (price * discount / 100)
-
-user = {'id': 1, 'name': 'John'}
-if user['id'] == 1:
-	print("User found")
+		return original_price
+	price_after_discount = original_price - (original_price * discount / 100)
+	return price_after_discount
