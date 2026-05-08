@@ -1,10 +1,10 @@
-def calculate_price(original_price, discount):
+def calculate_discount(price, discount):
   if discount == 0:
-    return original_price
-  return original_price / (1 - discount / 100)
+    return 0
+  return price / discount
 
 def parse_config(config):
-  if 'settings' in config and 'timeout' in config:
-    return config['settings'], config['timeout']
+  if 'key' in config:
+    return config['key']
   else:
-    raise ValueError("'settings' or 'timeout' key does not exist in config")
+    return None
