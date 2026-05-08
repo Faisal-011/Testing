@@ -1,4 +1,6 @@
-def calculate_price(price, discount):
-  if discount > 100:
-    raise ValueError("Discount cannot be greater than 100")
-  return price - (price * discount / 100)
+def calculate_price(original_price):
+	# Input validation
+	if original_price < 0:
+		raise ValueError("Price cannot be negative")
+	# Calculation logic
+	return original_price * 1.1
