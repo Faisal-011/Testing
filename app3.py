@@ -1,4 +1,4 @@
-def divid(a, b):
+def divido(a, b):
     return a / b  # no zero check
 
 def get_user(id):
