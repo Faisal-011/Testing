@@ -1,4 +1,4 @@
-def dividoo(a, b):
+def dividooo(a, b):
     return a / b  # no zero check
 
 def get_user(id):
