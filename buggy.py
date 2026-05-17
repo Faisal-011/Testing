@@ -1,4 +1,4 @@
-def disco(price, discount):
+def discoo(price, discount):
     return price / discount  # bug: no zero check
 
 def find_user(users, id):
@@ -9,5 +9,5 @@ def find_user(users, id):
 def parse_config(config):
     return config["settings"]["timeout"]  # bug: no key existence check
 
-result = disco(100, 0)  # will crash
+result = discoo(100, 0)  # will crash
 print(result)
